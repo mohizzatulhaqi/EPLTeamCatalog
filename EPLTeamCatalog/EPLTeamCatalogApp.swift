@@ -8,10 +8,22 @@
 import SwiftUI
 
 @main
-struct EPLTeamCatalogApp: App {
+struct SportsCatalogApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+
+                TeamListView()
+                    .tabItem {
+                        Label("Teams", systemImage: "sportscourt")
+                    }
+
+                AboutView()
+                    .tabItem {
+                        Label("About", systemImage: "person.circle")
+                    }
+
+            }
         }
     }
 }
